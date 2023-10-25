@@ -43,6 +43,13 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="static/js/bulma-carousel.js"></script>
+  <style>
+    .results-carousel {
+        width: 80%;       /* Set to your desired width */
+        margin: 0 auto;   /* Center the carousel horizontally */
+    }
+  </style>
 </head>
 <body>
 
@@ -172,39 +179,39 @@
 <!-- End paper abstract -->
 
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h4 class="subtitle has-text-centered">
-        <figure style="text-align: center;">
-          <img id="teaser" width="100%" src="static/images/head_fig.png">
-        </figure>
-<!--        <strong>AutoDAN</strong>: bb.-->
-      </h4>
-    </div>
-  </div>
-</section>
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <h4 class="subtitle has-text-centered">-->
+<!--        <figure style="text-align: center;">-->
+<!--          <img id="teaser" width="100%" src="static/images/head_fig.png">-->
+<!--        </figure>-->
+<!--&lt;!&ndash;        <strong>AutoDAN</strong>: bb.&ndash;&gt;-->
+<!--      </h4>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 
 <!-- Image carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--       <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/head_fig.png" alt="MY ALT TEXT"/>
 <!--        <h2 class="subtitle has-text-centered">-->
 <!--          First image description.-->
 <!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/prompt_examples.png" alt="MY ALT TEXT"/>
 <!--        <h2 class="subtitle has-text-centered">-->
 <!--          Second image description.-->
 <!--        </h2>-->
-<!--      </div>-->
+      </div>
 <!--      <div class="item">-->
 <!--        &lt;!&ndash; Your image here &ndash;&gt;-->
 <!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
@@ -219,11 +226,11 @@
 <!--        Fourth image description.-->
 <!--      </h2>-->
 <!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!-- End image carousel -->
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel-->
 
 
 
@@ -309,10 +316,8 @@
       <pre><code>@misc{zhu2023autodan,
       title={AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models},
       author={Sicheng Zhu and Ruiyi Zhang and Bang An and Gang Wu and Joe Barrow and Zichao Wang and Furong Huang and Ani Nenkova and Tong Sun},
+      journal={arXiv preprint arXiv:2310.15140},
       year={2023},
-      eprint={2310.15140},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR}
 }</code></pre>
     </div>
 </section>
