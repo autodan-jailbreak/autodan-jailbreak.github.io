@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models</title>
+  <title>AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -59,7 +59,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models</h1>
+            <h1 class="title is-1 publication-title">AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -97,7 +97,7 @@
                         <a href="https://arxiv.org/abs/2310.15140" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="ai ai-arxiv"></i>
                         </span>
                         <span>Paper</span>
                       </a>
@@ -121,9 +121,9 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (under internal review, coming soon) </span>
-                  </a>
-                </span>
+                    <span><s>Code</s> (under internal review) </span>
+                    </a>
+                  </span>
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -133,8 +133,18 @@
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code (implemented by a third party) </span>
-                  </a>
-                </span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="labeled_responses.html" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Labeled model responses</span>
+                    </a>
+                  </span>
 
 <!--                &lt;!&ndash; ArXiv abstract Link &ndash;&gt;-->
 <!--                <span class="link-block">-->
@@ -180,7 +190,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Safety alignment of Large Language Models (LLMs) can be compromised with manual jailbreak attacks and (automatic) adversarial attacks. Recent work suggests that patching LLMs against these attacks is possible: manual jailbreak attacks are human-readable but often limited and public, making them easy to block; adversarial attacks generate gibberish prompts that can be detected using perplexity-based filters. In this paper, we show that these solutions may be too optimistic. We propose an interpretable adversarial attack, \texttt{AutoDAN}, that combines the strengths of both types of attacks. It automatically generates attack prompts that bypass perplexity-based filters while maintaining a high attack success rate like manual jailbreak attacks. These prompts are interpretable and diverse, exhibiting strategies commonly used in manual jailbreak attacks, and transfer better than their non-readable counterparts when using limited training data or a single proxy model. We also customize \texttt{AutoDAN}'s objective to leak system prompts, another jailbreak application not addressed in the adversarial attack literature. Our work provides a new way to red-team LLMs and to understand the mechanism of jailbreak attacks.
+            Safety alignment of Large Language Models (LLMs) can be compromised with manual jailbreak attacks and (automatic) adversarial attacks. Recent studies suggest that defending against these attacks is possible: adversarial attacks generate unlimited but unreadable gibberish prompts, detectable by perplexity-based filters; manual jailbreak attacks craft readable prompts, but their limited number due to the necessity of human creativity allows for easy blocking. In this paper, we show that these solutions may be too optimistic. We introduce AutoDAN, an interpretable, gradient-based adversarial attack that merges the strengths of both attack types. Guided by the dual goals of jailbreak and readability, AutoDAN optimizes and generates tokens one by one from left to right, resulting in readable prompts that bypass perplexity filters while maintaining high attack success rates. Notably, these prompts, generated from scratch using gradients, are interpretable and diverse, with emerging strategies commonly seen in manual jailbreak attacks. They also generalize to unforeseen harmful behaviors and transfer to black-box LLMs better than their unreadable counterparts when using limited training data or a single proxy model. Furthermore, we show the versatility of AutoDAN by automatically leaking system prompts using a customized objective. Our work offers a new way to red-team LLMs and understand jailbreak mechanisms via interpretability.
           </p>
         </div>
       </div>
@@ -211,14 +221,14 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/head_fig.png" alt="MY ALT TEXT"/>
+        <img src="static/images/q1.png" alt="MY ALT TEXT"/>
 <!--        <h2 class="subtitle has-text-centered">-->
 <!--          First image description.-->
 <!--        </h2>-->
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/prompt_examples.png" alt="MY ALT TEXT"/>
+        <img src="static/images/q1b.png" alt="MY ALT TEXT"/>
 <!--        <h2 class="subtitle has-text-centered">-->
 <!--          Second image description.-->
 <!--        </h2>-->
@@ -325,7 +335,7 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@misc{zhu2023autodan,
-      title={AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models},
+      title={AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models},
       author={Sicheng Zhu and Ruiyi Zhang and Bang An and Gang Wu and Joe Barrow and Zichao Wang and Furong Huang and Ani Nenkova and Tong Sun},
       journal={arXiv preprint arXiv:2310.15140},
       year={2023},
